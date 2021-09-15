@@ -2,9 +2,29 @@
 {
     /**background: rgb(110, 108, 108);/*se pinta el fondo con background eligiendo a body
 }*/
-#ElFooter
+/*selectores 
+universal-    |*(nombre de lo elegido){propiedad: valor;} |modifica todos los elementos y los modifica.
+de tipo-      |tipo ejemplo h1,h2,p{prpiedad: valor;}mdifica los elementos de ese tipo.
+de clases-    |.(nombre de la clase){propiedad: valor;}modifica todos los elementos de su clase.
+ID-           |#(nombre del ID){propiedad:valor;}modifica los elementos del ID.
+por atributo- |[atributo="valor"]{propiedad: valor;}modifica las etiquetas con este atributo
+descendiente- |(etiqueta contenedora)(etiqueta indicada){propiedad:valor;}se elige a etiquetas dentro de otras para modificar
+pseudo clases-|(elige atributo):(elige accion){propiedad:valor}se elige la etiqueta y hay acciones para agregar.
+*/
+                /*Inicio del codigo*/
+body/*de tipo*/
 {
-    background: #79d61b;/*se toma el ID de la etiqueta a cambiar*/
+    background: white;/*cambiando el fondo de la pagina.*/
+}
+
+#editando-palabra
+{
+    font-size: 2em;/*tamaño de la letra*/
+    font-family: Georgia, 'Times New Roman', Times, serif;/*fuente de la letra*/
+    color: black;/*color de la letrA*/
+    line-height: 2;/*tamaño de las margenes hacia arriba y hacia abajo*/
+    font-weight: 500;/*modifica el grosor de las letras*/
+
 }
 #parrafo
 {
@@ -16,9 +36,67 @@
 }
 #h2
 {
-    border: 1px black;
+    border: 1px black !important;/* el (important) quiere decir que va a ser la forma en que se va a quedar por especificidad*/
+    display: inline;
 }
-li
+#h2-numero2{
+}
+li/*de tipo*/
 {
-    text-decoration: underline;/*se añade una linea decorativa debajo de la palabra dentro del (li)*/
+    text-decoration: underline;/*se añade una linea decorativa debajo de la palabra dentro del 
+    (li)*/
+    color: blue;
+}
+li:hover/*funciona como una pseudoclase*/
+{
+    color: violet;
+}
+#titulo
+{
+    color: gold;/*cambiando el color de las letrar del titulo con un ID*/
+}
+[prueba="probando"]
+{
+    color: brown;/*se le cambia el color a los elementos con un atributo dentro*/
+}
+h3 p
+{
+    background: yellow;/*se cambia el color al dependiente*/
+    color: black;
+}
+#segundo-letrero
+{
+    font-size: 3em;/*se puede usar cm,pt,mm,vw,vh 100vw o vh es ocupar toda la pantalla de aariba a abajoo de lado pero se recomienda em para mantener la relacion don moviles (1em = 16px)*/
+    font-family: 'Yanone Kaffeesatz', sans-serif;;/*importando una fuente de google para usar en la pagina web.*/
+}
+#h1-cajas{
+    background: turquoise;
+    color: slategrey;
+}
+#boton{
+    background: red;
+    font-family: 'Ceviche One', cursive;
+    padding: 2em;
+}
+
+#boton:hover{
+    background: black;
+    color: yellow;
+
+}
+#subtitulo-cajas{
+    color: darkblue;
+    font-size: 3em;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+#padding{
+    background-color: tomato;/*dandole color de fondo a el objeto*/
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;/*limitando el tamaño de la caja a el de las letras*/
+    padding-bottom: 2em;/*probando diferentes paddings este es la parte de abajo*/
+    padding-right: 3em;/*este es la parte de la derecha*/
+    padding-top: 4em;/*este es la parte de arriba*/
+    padding-left: 5em;/*este es la parte izquierda*/
+    /*TEORIA: si le damos a (padding: 10px;) sera en general para todos los lados si le damos (padding: 10 px 20 px;) la primera sera arriba y abajo y la segunda los lados. si le damos (padding: 10px 20 px 10 px 20 px;) sera primero arriba despues derecha despues abajo y por ultimo izquierda*/
 }
