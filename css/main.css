@@ -12,11 +12,12 @@ descendiente- |(etiqueta contenedora)(etiqueta indicada){propiedad:valor;}se eli
 pseudo clases-|(elige atributo):(elige accion){propiedad:valor}se elige la etiqueta y hay acciones para agregar.
 */
                 /*Inicio del codigo*/
+/*la parte del fondo de la pagina*/
 body/*de tipo*/
 {
     background: white;/*cambiando el fondo de la pagina.*/
 }
-
+/*la parte que dice titulo bonito*/
 #editando-palabra
 {
     font-size: 2em;/*tamaño de la letra*/
@@ -26,19 +27,31 @@ body/*de tipo*/
     font-weight: 500;/*modifica el grosor de las letras*/
 
 }
+/*la parte de parrafo lorem intsu*/
 #parrafo
 {
     background: rgb(88, 43, 43);
 }
+/*el titulo y subtitulo de la pagina*/
 .seccion
 {
     background: royalblue;/*elegimos la clase creada y pintamos toda etiqueta asociada a ella*/
 }
-#h2
+#titulo
 {
+    color: gold;/*cambiando el color de las letrar del titulo con un ID*/
+    text-align: center;/*sirve para centrar el texto*/
+}
+#segundo-letrero{
+    font-size: 3em;/*se puede usar cm,pt,mm,vw,vh 100vw o vh es ocupar toda la pantalla de aariba a abajoo de lado pero se recomienda em para mantener la relacion don moviles (1em = 16px)*/
+    font-family: 'Yanone Kaffeesatz', sans-serif;;/*importando una fuente de google para usar en la pagina web.*/
+/*la parte que sellama h2*/
+}
+#h2{
     border: 1px black !important;/* el (important) quiere decir que va a ser la forma en que se va a quedar por especificidad*/
     display: inline;
 }
+/*el segundo h2*/
 #h2-numero2{
 }
 li/*de tipo*/
@@ -47,47 +60,54 @@ li/*de tipo*/
     (li)*/
     color: blue;
 }
+/*Listas*/
 li:hover/*funciona como una pseudoclase*/
 {
     color: violet;
 }
-#titulo
-{
-    color: gold;/*cambiando el color de las letrar del titulo con un ID*/
-}
+
 [prueba="probando"]
 {
     color: brown;/*se le cambia el color a los elementos con un atributo dentro*/
 }
+/*la parte de etiqueta prueba*/
 h3 p
 {
     background: yellow;/*se cambia el color al dependiente*/
     color: black;
 }
-#segundo-letrero
-{
-    font-size: 3em;/*se puede usar cm,pt,mm,vw,vh 100vw o vh es ocupar toda la pantalla de aariba a abajoo de lado pero se recomienda em para mantener la relacion don moviles (1em = 16px)*/
-    font-family: 'Yanone Kaffeesatz', sans-serif;;/*importando una fuente de google para usar en la pagina web.*/
-}
+/*pagina 2*/
+/*titulo de pagina*/
 #h1-cajas{
     background: turquoise;
     color: slategrey;
+    border-radius: 15%;/*se usa para dar redondeado a las cajas del fondo*/
+    text-align: center;
 }
+/*edicion de boton*/
 #boton{
     background: red;
     font-family: 'Ceviche One', cursive;
     padding: 2em;
 }
-
 #boton:hover{
     background: black;
     color: yellow;
 
 }
+/*el subtitulo*/
 #subtitulo-cajas{
-    color: darkblue;
+    color: rgb(0, 226, 30);
+    background: black;
     font-size: 3em;
     font-family: 'Oleo Script Swash Caps', cursive;
+    display: inline;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    margin: 1em;/*se usa para generar margenes entre objetos podemos ver los mismos usos de padding con el top left right y bottom*/
+    border-radius: 10px;/*segunda forma de tratar los bordes esta vez redondeando las esquinas*/
 }
 #padding{
     background-color: tomato;/*dandole color de fondo a el objeto*/
@@ -99,4 +119,143 @@ h3 p
     padding-top: 4em;/*este es la parte de arriba*/
     padding-left: 5em;/*este es la parte izquierda*/
     /*TEORIA: si le damos a (padding: 10px;) sera en general para todos los lados si le damos (padding: 10 px 20 px;) la primera sera arriba y abajo y la segunda los lados. si le damos (padding: 10px 20 px 10 px 20 px;) sera primero arriba despues derecha despues abajo y por ultimo izquierda*/
+}
+/*etiqueta h4*/
+#bordes{
+    background: turquoise;
+    padding: 1em;
+    color: blue;
+    font-size: 2.5em;
+    display: inline;
+    border-top-left-radius: 2.5em;/*creando bordes curveados en la parte alta de la caja*/
+    border-top-right-radius: 2.5em;
+    border: 0.3em solid rgb(0, 34, 226);/*pintando el borde de la caja definimos asi (tamaño estilo color)*/
+}
+#bordes2{/*segundo estilo*/
+    background: turquoise;
+    padding: 1em;
+    color: blue;
+    font-size: 2.5em;
+    display: inline;
+    border-top-left-radius: 2.5em;/*creando bordes curveados en la parte alta de la caja*/
+    border-top-right-radius: 2.5em;
+    border: 0.3em dashed rgb(0, 34, 226);/*pintando el borde de la caja definimos asi (tamaño estilo color)*/
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+#bordes3{/*tercer estilo*/
+    background: turquoise;
+    padding: 1em;
+    color: blue;
+    font-size: 2.5em;
+    display: inline;
+    border-top-left-radius: 2.5em;/*creando bordes curveados en la parte alta de la caja*/
+    border-top-right-radius: 2.5em;
+    border: 0.3em double rgb(0, 34, 226);
+    box-shadow: 2px 4px 15px 0 rgb(163, 0, 0);/*agregar sombras compuesto por (eje X, eje Y,tamaño de sombra, borde generalmente 0, color*/
+}
+#transformacion1{
+    color: black;
+    background: yellow;
+    transform: rotate(40deg);
+}
+#caja1{
+    width: 100px;/*lw damos un tamaño de alto y de largo */
+    height: 100px;
+    background: red;
+    margin: auto;/*lo que hace es que centra algo */
+    outline:10px solid rgb(0, 0, 143);/*lo que hace el borde azul es que funciona como borde tipo box sizing pero no ocupa espacio como si lo hace border*/
+    position: fixed;/*sirve para posicionar un elemento fijo en la pantalla sin que se afecte por el scroll*/
+    right: 10%;
+    top: 10%;
+}
+#caja2{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    margin: auto;
+    border: 10px solid red;
+    box-sizing: content-box;/*lo que hace es agregar el borde fuera de la caja establecida sin quitar espacio de lo establecido ya*/
+}
+#caja3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    width: 100px;
+    height: 100px;
+    background: violet;
+}
+#caja4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    width: 100px;
+    height: 100px;
+    background: yellowgreen;
+    position: relative;/*agregamos position y podemos modificar la posicion del elemento en pantalla pero ese elemento conserva su posicion desde donde arranca */
+    top: 20px;/*posicionamos con las reglas generales de arriba abajo y los lados*/
+    left: 20px;
+}
+#caja5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+}
+#caja6{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: black;
+    width: 100px;
+    height: 100px;
+    background: royalblue;
+}
+.spans{
+    padding: 30px;
+}
+#span1{
+    background: turquoise;
+}
+#span2{
+    background: violet;
+}
+#span3{
+    background: slategrey;
+    display: none; /*como aplique el (display none) se desaparece de la cuadricula y el espacio lo ocupa otro objeto*/
+}
+#span4{
+    background: slateblue;
+}
+#span5{
+    background: rgb(163, 0, 0);
+    visibility: hidden; /*lo que hace es que oculta por completo el objeto pero se conserva el espacio*/
+}
+#span6{
+    background: springgreen;
+}
+/*pagina 4*/
+.circulo{
+    background: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    top: 100px;
+    left: 300px;
+    z-index: 4;/*el (Z-index) nos ayuda a establecer las jerarquias hacia el fondoel numero mas alto determina cual vamos a ver de primero*/
+}
+.rojo{
+    background: red;
+    position: absolute;
+    top: 120px;
+    left: 330px;
+    z-index: 2;
+}
+.azul{
+    background: steelblue;
+    position: absolute;
+    top: 140px;
+    left: 360px;
+    z-index: 3;
 }

@@ -1,0 +1,195 @@
+Codigo CSS
+
+SELECTORES
+
+HTML
+<div class="circulo"></div>      | lo que pasa aqui es que podemos usar una clase para definir un elemento con atributos
+<div class="circulo rojo"></div> | y podemos herenciar esa clase con otros elementos usando su nombre.
+<div class="circulo azul"></div> |
+CSS
+.circulo{                        |
+    background: yellow;          |
+    width: 10px;                 |
+    height: 10PX;                |
+    border-radius: 100%;         |
+}                                |
+.rojo{                           |
+    background: red;             |
+}                                |
+.azul{                           |
+    background:blue;             |
+}                                |
+
+ELECCION DE COLORES RAIZ
+
+    :root{                    |sirve para definir una paleta de colores para el sitio web
+        --blanco:#ffffff;     |
+        --oscuro:#212121;
+        --primario:#ffc107;
+        --secundario:#0097a7;
+        --gris:#757575;
+        --ejemplo3:#0731ff94;
+    }
+    color:var(--oscuro);
+    color:var(--primario);
+
+EDICIONES DE TEXTO
+
+--color: valor; |color: red; |sirve para cambiar el color de las letras.
+--font-size: valor; |font-size: 20px; |sirve para cambiar el tamaño de las letras.
+--font-family: tipo; |font-family: Georgia, 'Times New Roman', Times; |sirve para cambiar el tipo de fuente.
+--line-height: valor; |line-height: 2; |sirve para agradar las margenes de alto y bajo de las letras.
+--font-weight: valor; |font-weight: 500; |modifica el grosor de las letras.
+--text-align: posicion; |text-align: center; |se usa para posicionar un texto hacia algun lugar
+-text-align: left;   |
+-text-align: right;  |
+-text-align: justify;|se usa para hacer el texto como en word organizado
+--text-decoration: valor; |text-decoration: underline; |sirve para decorar los textos en este caso una lina baja.
+-text-decoration: overline;     |sirve para poner una linea sobre el texto.
+-text-decoration: line-through; |sirve para hacer una linea tachada en medio del texto.
+--letter-spacing: valor; |letter-spacing: 2px; |sirve para dar un espacio establecido entre letras.
+--line-height: valor; |line-height: 3px; |sirve para asignar un espacio entre renglones.
+--list-style:none; |se quita el punto al lado de la lista.
+--------------------------------------------------------------------------------------------------
+
+ESPECIFICIDAD
+
+--!important |se usa como atributo para darle importancia en especificidad sobre todo selector.
+
+CAJAS
+
+--background: valor; |background: white; |sirve para pintar el fondo de cualquier cosa.
+--border: medida tipo color; |border: 0.3em dashed rgb(0, 34, 226); |sirve para agregar bordes a las cajas.
+-border: 0.3em dotted red; |
+-border: 0.3em solid red;  |
+-border: 0.3em double red; |
+-border: 0.3em groove red; |
+-border: 0.3em ridge red;  |
+-border: 0.3em inset red;  |
+-border: 0.3em outset red; |
+-border: 0.3em none red;   |
+-border: 0.3em hidden red; |
+--border-radius: valor; |border-radius: 15%; |sirve para redondear una caja o los bordes de una caja.
+-border-radius: arriba izq arriba der abajo der abajo izqu |tambn se puede escribir asi y se redondeara una de las 4 esquinas.
+-border-radius: 15%;            |con el porciento se redondea la caja.
+-border-radius: 15px;           |con el px se redondean las esquinas.
+-border-top-left-radius: 2.5em; |sirve para dar esquina redondeada en la parte izquierda alta.
+-border-top-right-radius: 2.5em;|sirve para dar esquina redondeada en la parte derecha alta. 
+--padding: valor; |padding: 2em; |se usa para agrandar la caja alrededor de un texto.
+-padding-top:  10px;  |es la parte de arriba del padding.
+-padding-left: 10px;  |es la parte izquierda del padding.
+-padding-right: 10px; |es la parte derecha del padding.
+-padding-bottom: 10px |es la parte baja del padding.
+--margin: valor; |margin: auto; |sirve para darle espacio con otros objetos.
+-margin-top: 10px;   |es la parte alta del margen.
+-margin-left: 10px;  |es la parte izquierda del margen.
+-margin-right: 10px; |es la parte derecha del margen.
+-margin-bottom: 10px;|es la parte baja del margen.
+-margin: auto: 10px; |sirve para posicionar algo en el centro.
+--text-shadow: valor valor valor color; |text-shadow: 3px 3px 3px rgb(0, 0, 0); |sirve para agregar sombras a las cajas o letras (eje X, eje Y,tamaño de sombra, color).
+--box-shadow: valor valor valor valor color box-shadow: 2px 4px 15px 0 rgb(163, 0, 0);|sirve para agregar sombras a las cajas o letras (eje X, eje Y,tamaño de sombra, borde generalmente 0, color).
+--transform: rotate(valor); |transform: rotate(40deg); |sirve para voltear algo los grados que definamos.
+--outline: medida tipo color; |outline:10px solid rgb(0, 0, 143); |sirve para dibujar un borde que no ocupa espacio en pantalla.
+--box-sizing: content-box; |sirve para cuando se defina un borde sacarlo de la caja original.
+--width: medida; |width: 100px; |sirve para dar una medida de ancho de de la caja
+--height: medida;|height: 100px;|sirve para dar una medida de alto de la caja
+
+
+POSICIONES DE LA CAJA
+
+--position: valor; |position: relative; |sirve paraposicionar la caja en diferentes lugares de la pantalla.
+-position: fixed; |sirve para fijar un elemento que cuando se hace scroll en pantalla no se mueve.
+-position: absolute; |se da respecto a el contenedor padre osea la pantalla entera pudiendo quedar sobre otros objetos en pantalla.
+-position: static; |
+--z-index: valor; |z-index: 2; |sirve para determinar que objeto va mas al fondo o mas al frente.
+
+
+DISPLAY (Mostrar objetos)
+
+--display: valor; |display: inline; |sirve para recortar el ancho de todo una caja como la de los H1,...,H6 funciona como unaetiqueta <span></span>
+-display: block; |funciona como la etiqueta <br> lo que hace es generar hasta el final del margen todo un espacio ocupado.
+-display: none;  |funciona para ocultar un objeto de la pantalla.
+--visibility: valor; |visibility: hidden; |funciona eliminando un objeto de pantalla pero conservando su espacio.
+
+CENTRADO
+
+--text-align: center; |sirve para  centrar onjetos.
+--margin: auto;       |
+--margin: 0 auto;     |hace la misma funcion pero agrega 0 de alto y 0 bajo.
+--position: relative;           |
+--left: 50%;                    |la misma funcion de centrar.
+--margin-left;mitad del objeto; |
+--vertical-align: valor; |vertical-align: middle; |sirve para centrar algo verticalmente.
+
+FLEXBOX
+
+--flex-direction: atributo; |flex-direction: row | sirve para definir cajas en un orden.
+-flex-direction: row;            |se organiza una caja lateral en orden.
+-flex-direction: row-reverse;    |se organiza la caja al reves.
+-flex-direction: column;         |se organiza en columna.
+-flex-direction: column-reverse; |se organiza una columna al reves.
+
+FLEXWRAP
+
+--flex-wrap: nowrap; |sirve para crear cajas con otras cajas dentro u opciones.
+-flex-wrap: nowrap;       |sirve para crear una caja con opciones en linea.
+-flex-wrap: wrap;         |sirve para crear la caja en dos pisos.
+-flex-wrap: wrap-reverse; |sirve para crear esa misma caja al reves.
+
+JUSTIFY CONTENT
+
+--justify-content: center; |sirve para crear contenedores con elementos ordenados dentro.
+-justify-content: flex-start;   |sirve para establecer los objetos a la izquierda.
+-justify-content: center ;      |sirve para contener los elementos en el centro.
+-justify-content: flex-end;     |sirve para contener los elementos a la derecha.
+-justify-content: space-between;|sirve para organizar los elementos espaciados.
+-justify-content: space around; |sirve para organizar los elementos con margenes.
+
+ALIGN CONTENT
+
+--align-content: stretch; |sirve para posicionar en forma de columna elementos dentro.
+-align-content: stretch;       |sirve para contener elementos dentro y los expande ajustandose.
+-align-content: flex-start;    |sirve para organizar los elementos de arriba hacia abajo.
+-align-content: center;        |sirve para centrar los elementos en la columna.
+-align-content: flex-end;      |sirve para posicionar los elementos en la parte baja del contenedor.
+-align-content: space-between; |sirve para posicionar los objetos con espacios en la columnas.
+-align-content: space-around;  |sirve para posicionar los elementos a la misma distancia dentro de la columna.
+
+ALIGN ITEMS
+
+align-items: stretch; |sirve para crear cajas con una alineacion.
+align-items: stretch;   |sirve para agrandar los objetos y hacerlos ajustar a la caja mayor.
+align-items: baseline;  |sirve para organizar los elementos en orden decreciente de tamaño.
+align-items: flex-start;|sirve para posicionar los elementos al principio de la lista.
+align-items: center;    |sirve para centrar los elementos dentro de la caja.
+align-items: flex-end;  |sirve para posicionar los elementos en la parte baja de la caja. 
+
+ETC HAY MAS VER DOCUMENTO DE FLEX...
+
+
+GRID LAYOUT
+
+--display: grid;  |se inicia con el display para generar una grilla parecida a excel.
+-grid-template-columns: repeat(2, 1fr); |sirve para generar las filas de la grilla.
+-grid-template-rows: repeat(4, 1fr);    |sirve para generar las columnas de la grilla.
+-grid-column-gap: 13px;                 |sirve para generar los margenes entre columnas.
+-grid-row-gap: 13px;                    |sirve para generar los margenes en las filas.
+
+
+MEDIA QUERYS
+
+@media ONLY SCREEN                        |sirve para dar un diseño responsive que se adapte a
+    and(min-device-width: 320px)          |diferentes pantallas
+    and(max-device-width: 480px)
+    and(-webkit-min-device-pixel-ratio: 1){
+        aqui agregamos el codigo que respondera
+        a las medidas de pantalla
+    }
+
+
+
+SEUDO SELECTORES
+
+selector:hover{} |sirve para dar animacion a cualquier lugar que se selecciones.
+selector:first-child{} |sirve para seleccionar el primer elemento de algo.
+selector:nth-child(2n) |sirve para elegir elementos en este caso los pares.
